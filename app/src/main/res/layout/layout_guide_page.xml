@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/guide_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/guide_page_margin_v"
+        android:layout_marginLeft="@dimen/guide_page_margin_h"
+        android:layout_marginRight="@dimen/guide_page_margin_h"
+        android:layout_marginTop="@dimen/guide_page_margin_v"
+        android:background="@drawable/guide_fornew_page_1">
+
+        <ImageView
+            android:id="@+id/guide_share_btn"
+            android:layout_width="@dimen/guide_share_btn_size"
+            android:layout_height="@dimen/guide_share_btn_size"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_marginTop="@dimen/margin10"
+            android:src="@drawable/guide_fornew_share_btn" />
+
+        <ImageView
+            android:id="@+id/guide_gotoapp_btn"
+            android:layout_width="@dimen/guide_gotoapp_btn_w"
+            android:layout_height="@dimen/guide_gotoapp_btn_h"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:src="@drawable/guide_fornew_gotoapp_btn" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/guide_skip_btn"
+        android:layout_width="@dimen/guide_skip_btn_w"
+        android:layout_height="@dimen/guide_skip_btn_h"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin10"
+        android:layout_marginLeft="@dimen/margin10"
+        android:src="@drawable/guide_fornew_skip_btn" />
+
+</RelativeLayout>
