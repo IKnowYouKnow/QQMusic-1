@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.internal.DebouncingOnClickListener;
 
-public class GuideActivity extends BaseActivity {
+public class GuideActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
 
     @Bind(R.id.guide_view_pager) ViewPager mGuideViewPager;
     @Bind(R.id.guide_circle_group) LinearLayout mGuideCircleGroup;
@@ -39,6 +39,7 @@ public class GuideActivity extends BaseActivity {
         ButterKnife.bind(this);
         createCircles();
         mGuideViewPager.setAdapter(new GuidePagerAdapter());
+        mGuideViewPager.setOnPageChangeListener(this);
     }
 
     private void createCircles() {
@@ -52,6 +53,24 @@ public class GuideActivity extends BaseActivity {
             mGuideCircleGroup.addView(imageView);
         }
         mGuideCircleGroup.getChildAt(0).setSelected(true);
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+        for (int i = 0; i < mGuideImages.length; i++) {
+            mGuideCircleGroup.getChildAt(i).setSelected(false);
+        }
+        mGuideCircleGroup.getChildAt(position).setSelected(true);
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
     }
 
     private void gotoMainActivity() {
@@ -102,13 +121,11 @@ public class GuideActivity extends BaseActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.guide_skip_btn:
+                case R.id.guide_gotoapp_btn:
                     AppConfig.setNeedGuide(false);
-
+                    gotoMainActivity();
                     break;
                 case R.id.guide_share_btn:
-                    break;
-                case R.id.guide_gotoapp_btn:
-                    gotoMainActivity();
                     break;
                 default:
                     break;

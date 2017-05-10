@@ -23,6 +23,6 @@ public class AppConfig {
     }
 
     public static void setNeedGuide(boolean b) {
-        editor.putBoolean("need_guide", b);
+        editor.putBoolean("need_guide", b).commit();
     }
 }
