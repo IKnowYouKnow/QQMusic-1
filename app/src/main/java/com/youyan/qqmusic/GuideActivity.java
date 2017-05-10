@@ -13,11 +13,11 @@ import android.widget.RelativeLayout;
 import com.youyan.qqmusic.base.BaseActivity;
 import com.youyan.qqmusic.util.AppConfig;
 import com.youyan.qqmusic.util.DimenUtils;
+import com.youyan.qqmusic.util.ShareSDKUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.internal.DebouncingOnClickListener;
 
 public class GuideActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
 
@@ -73,6 +73,12 @@ public class GuideActivity extends BaseActivity implements ViewPager.OnPageChang
 
     }
 
+    @Override
+    public void onBackPressed() {
+        gotoMainActivity();
+        AppConfig.setNeedGuide(false);
+    }
+
     private void gotoMainActivity() {
         startActivity(new Intent(mActivity, MainActivity.class));
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
@@ -126,6 +132,8 @@ public class GuideActivity extends BaseActivity implements ViewPager.OnPageChang
                     gotoMainActivity();
                     break;
                 case R.id.guide_share_btn:
+                    ShareSDKUtils.oneKeyShare(mActivity, "分享QQ音乐", "QQ音乐是腾讯公司推出的一款免费音乐服务...",
+                            "https://y.qq.com/");
                     break;
                 default:
                     break;
