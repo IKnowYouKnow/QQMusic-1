@@ -6,7 +6,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class BaseActivity extends AppCompatActivity implements View.OnClickListener {
+import com.youyan.qqmusic.util.StatusBarCompat;
+
+import butterknife.ButterKnife;
+
+public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
 
     protected Activity mActivity;
 
@@ -24,5 +28,11 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
+    }
+
+    @Override
+    public void onContentChanged() {
+        super.onContentChanged();
+        ButterKnife.bind(this);
     }
 }

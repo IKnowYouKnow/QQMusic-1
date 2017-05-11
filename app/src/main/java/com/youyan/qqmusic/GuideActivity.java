@@ -36,7 +36,7 @@ public class GuideActivity extends BaseActivity implements ViewPager.OnPageChang
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guide);
-        ButterKnife.bind(this);
+//        ButterKnife.bind(this);
         createCircles();
         mGuideViewPager.setAdapter(new GuidePagerAdapter());
         mGuideViewPager.setOnPageChangeListener(this);
