@@ -10,6 +10,7 @@
         android:id="@+id/title_left_btn"
         android:layout_width="@dimen/title_btn_size"
         android:layout_height="@dimen/title_btn_size"
+        android:layout_marginLeft="@dimen/margin10"
         android:scaleType="center" />
 
     <FrameLayout
@@ -22,6 +23,7 @@
         android:id="@+id/title_right_btn"
         android:layout_width="@dimen/title_btn_size"
         android:layout_height="@dimen/title_btn_size"
+        android:layout_marginRight="@dimen/margin10"
         android:scaleType="center" />
 
 </LinearLayout>

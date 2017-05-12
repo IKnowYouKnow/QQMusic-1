@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment implements View.OnClickListener {
 
     protected Activity mActivity;
     protected View mRootView;
@@ -29,6 +29,7 @@ public abstract class BaseFragment extends Fragment {
         if (mRootView == null) {
             mRootView = inflater.inflate(getLayoutRes(), container, false);
             ButterKnife.bind(this, mRootView);
+            initView();
         }
 
         ViewGroup parent = (ViewGroup) mRootView.getParent();
@@ -41,4 +42,13 @@ public abstract class BaseFragment extends Fragment {
 
     @LayoutRes
     protected abstract int getLayoutRes();
+
+    protected void initView() {
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+    }
 }
