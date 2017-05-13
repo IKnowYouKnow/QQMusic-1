@@ -7,12 +7,15 @@ import android.view.View;
 import android.view.WindowManager;
 
 import com.youyan.qqmusic.base.BaseActivity;
+import com.youyan.qqmusic.main.view.MainFragment;
 import com.youyan.qqmusic.util.DimenUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends BaseActivity implements SlidingPaneLayout.PanelSlideListener {
+public class MainActivity extends BaseActivity
+        implements SlidingPaneLayout.PanelSlideListener,
+                    MainFragment.OnMainTabBtnClickListener {
 
     @Bind(R.id.sliding_pane) SlidingPaneLayout mSlidingPane;
 
@@ -52,5 +55,14 @@ public class MainActivity extends BaseActivity implements SlidingPaneLayout.Pane
             return;
         }
         super.onBackPressed();
+    }
+
+    @Override
+    public void onTabBtnClick(int id) {
+        switch (id) {
+            case R.id.title_left_btn:
+                mSlidingPane.openPane();
+                break;
+        }
     }
 }

@@ -10,4 +10,7 @@
     <color name="guide_circle_normal">#a3a3a3</color>
     <color name="guide_circle_select">@color/white</color>
 
+    <color name="maintab_text_nor">#E5F7EE</color>
+    <color name="maintab_text_sel">@color/white</color>
+    <color name="main_search_editbg">#2CAF70</color>
 </resources>

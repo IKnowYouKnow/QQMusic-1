@@ -14,8 +14,20 @@
     <dimen name="title_height">50dp</dimen>
     <dimen name="title_btn_size">50dp</dimen>
 
+    <dimen name="main_searchbar_h">35dp</dimen>
+    <dimen name="main_searchbtn_size">28dp</dimen>
+
     <dimen name="margin5">5dp</dimen>
     <dimen name="margin10">10dp</dimen>
+    <dimen name="margin15">15dp</dimen>
+    <dimen name="margin18">18dp</dimen>
     <dimen name="margin20">20dp</dimen>
+
+    <dimen name="padding5">5dp</dimen>
+
+    <dimen name="font12">12sp</dimen>
+    <dimen name="font16">16sp</dimen>
+    <dimen name="font18">18sp</dimen>
+    <dimen name="font20">20sp</dimen>
 
 </resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_searchbar_h"
+    android:background="@color/colorPrimary"
+    android:paddingLeft="@dimen/padding5"
+    android:paddingRight="@dimen/padding5"
+    android:paddingBottom="@dimen/padding5"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/search_edit_bg">
+
+        <LinearLayout
+            android:id="@+id/label_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/main_searchbtn_size"
+                android:layout_height="@dimen/main_searchbtn_size"
+                android:src="@drawable/label_search_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font16"
+                android:textColor="@color/maintab_text_nor"
+                android:text="@string/search"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>

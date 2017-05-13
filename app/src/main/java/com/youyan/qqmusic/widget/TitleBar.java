@@ -50,4 +50,8 @@ public class TitleBar {
     public void setRightBtn(int rightBtn) {
         mRightBtn.setImageResource(rightBtn);
     }
+
+    public void setTitleContent(View view) {
+        mTitleContent.addView(view);
+    }
 }
