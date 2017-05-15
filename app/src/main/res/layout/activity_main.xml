@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.SlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.youyan.qqmusic.widget.MySlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/sliding_pane"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <fragment
+    <FrameLayout
         android:id="@+id/menu_fragemnt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        class="com.youyan.qqmusic.main.view.MenuFragment" />
+        android:layout_height="match_parent" />
 
-    <fragment
+    <FrameLayout
         android:id="@+id/main_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        class="com.youyan.qqmusic.main.view.MainFragment" />
+        android:layout_height="match_parent" />
 
-</android.support.v4.widget.SlidingPaneLayout>
+</com.youyan.qqmusic.widget.MySlidingPaneLayout>

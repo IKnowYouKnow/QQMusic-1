@@ -4,25 +4,32 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.youyan.qqmusic.MainActivity;
 import com.youyan.qqmusic.R;
 import com.youyan.qqmusic.base.BaseFragment;
+import com.youyan.qqmusic.main.adapter.MainPagerAdapter;
+import com.youyan.qqmusic.main.view.page.DiscoverFragment;
+import com.youyan.qqmusic.main.view.page.MineFragment;
+import com.youyan.qqmusic.main.view.page.MusicFragment;
 import com.youyan.qqmusic.util.DimenUtils;
 import com.youyan.qqmusic.util.StatusBarCompat;
 import com.youyan.qqmusic.widget.TitleBar;
+
+import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainFragment extends BaseFragment {
+public class MainFragment extends BaseFragment implements ViewPager.OnPageChangeListener {
 
     public interface OnMainTabBtnClickListener {
         void onTabBtnClick(int id);
@@ -58,6 +65,37 @@ public class MainFragment extends BaseFragment {
     @Override
     protected void initView() {
         initMainTab();
+        initViewPager();
+    }
+
+    private void initViewPager() {
+        ArrayList<Fragment> fragments = new ArrayList<>();
+        fragments.add(new MineFragment());
+        fragments.add(new MusicFragment());
+        fragments.add(new DiscoverFragment());
+        MainPagerAdapter adapter = new MainPagerAdapter(getChildFragmentManager(), fragments);
+        mViewPager.setAdapter(adapter);
+        mViewPager.setOnPageChangeListener(this);
+        mViewPager.setCurrentItem(1, false);
+        MainActivity activity = mActivity instanceof MainActivity ? ((MainActivity) mActivity) : null;
+        if (activity != null) {
+            activity.getSlidingPane().setConflictViewPager(mViewPager);
+        }
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+        mTab.setSelectTab(position);
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
     }
 
     private void initMainTab() {
@@ -126,12 +164,15 @@ public class MainFragment extends BaseFragment {
             switch (v.getId()) {
                 case R.id.main_tab1:
                     setSelectTab(0);
+                    mViewPager.setCurrentItem(0, true);
                     break;
                 case R.id.main_tab2:
                     setSelectTab(1);
+                    mViewPager.setCurrentItem(1, true);
                     break;
                 case R.id.main_tab3:
                     setSelectTab(2);
+                    mViewPager.setCurrentItem(2, true);
                     break;
             }
         }

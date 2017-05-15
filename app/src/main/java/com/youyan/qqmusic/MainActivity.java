@@ -2,22 +2,24 @@ package com.youyan.qqmusic;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.SlidingPaneLayout;
 import android.view.View;
 import android.view.WindowManager;
 
 import com.youyan.qqmusic.base.BaseActivity;
 import com.youyan.qqmusic.main.view.MainFragment;
+import com.youyan.qqmusic.main.view.MenuFragment;
 import com.youyan.qqmusic.util.DimenUtils;
+import com.youyan.qqmusic.widget.MySlidingPaneLayout;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity
         implements SlidingPaneLayout.PanelSlideListener,
                     MainFragment.OnMainTabBtnClickListener {
 
-    @Bind(R.id.sliding_pane) SlidingPaneLayout mSlidingPane;
+    @Bind(R.id.sliding_pane) MySlidingPaneLayout mSlidingPane;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,15 @@ public class MainActivity extends BaseActivity
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.menu_fragemnt, new MenuFragment());
+        transaction.replace(R.id.main_fragment, new MainFragment());
+        transaction.commit();
+    }
+
+    public MySlidingPaneLayout getSlidingPane() {
+        return mSlidingPane;
     }
 
     @Override
