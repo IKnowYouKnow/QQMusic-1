@@ -28,6 +28,8 @@ dependencies {
     compile 'com.android.support:percent:23.4.0'
     testCompile 'junit:junit:4.12'
     compile files('libs/butterknife-7.0.1.jar')
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
     // sharesdk
     compile files('libs/MobCommons-2017.0412.1554.jar')
     compile files('libs/MobTools-2017.0412.1554.jar')

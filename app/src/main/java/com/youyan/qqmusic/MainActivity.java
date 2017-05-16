@@ -10,7 +10,6 @@ import android.view.WindowManager;
 import com.youyan.qqmusic.base.BaseActivity;
 import com.youyan.qqmusic.main.view.MainFragment;
 import com.youyan.qqmusic.main.view.MenuFragment;
-import com.youyan.qqmusic.util.DimenUtils;
 import com.youyan.qqmusic.widget.MySlidingPaneLayout;
 
 import butterknife.Bind;
@@ -28,7 +27,9 @@ public class MainActivity extends BaseActivity
 //        ButterKnife.bind(this);
 
         mSlidingPane.setPanelSlideListener(this);
-        mSlidingPane.setParallaxDistance(DimenUtils.dp2px(100));
+        mSlidingPane.setParallaxDistance(getResources().getDimensionPixelSize(R.dimen.slide_parallax_distance));
+        mSlidingPane.setCoveredFadeColor(0);
+        mSlidingPane.setSliderFadeColor(getResources().getColor(R.color.slide_fade));
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);

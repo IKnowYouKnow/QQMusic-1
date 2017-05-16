@@ -4,4 +4,6 @@
     <string name="maintab_music">音乐馆</string>
     <string name="maintab_discover">发现</string>
     <string name="search">搜索</string>
+    <string name="minibar_default_text">QQ音乐 听我想听的歌</string>
+
 </resources>

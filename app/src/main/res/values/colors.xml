@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#31C27C</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="text_primary">#2b2b2b</color>
+    <color name="text_second">#d0d0d0</color>
+
     <color name="white">#FFFFFF</color>
 
     <color name="guide_window_bg">#2B2B2B</color>
@@ -13,4 +16,5 @@
     <color name="maintab_text_nor">#E5F7EE</color>
     <color name="maintab_text_sel">@color/white</color>
     <color name="main_search_editbg">#2CAF70</color>
+    <color name="slide_fade">#66000000</color>
 </resources>
