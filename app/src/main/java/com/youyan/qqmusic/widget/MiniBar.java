@@ -72,7 +72,8 @@ public class MiniBar implements View.OnClickListener {
     }
 
     public void stopLoading() {
-
+        mLoadCircle.clearAnimation();
+        mLoadCircle.setImageResource(R.drawable.minibar_circle);
     }
 
 

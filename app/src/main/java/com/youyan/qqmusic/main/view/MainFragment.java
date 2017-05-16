@@ -21,6 +21,7 @@ import com.youyan.qqmusic.main.view.page.MineFragment;
 import com.youyan.qqmusic.main.view.page.MusicFragment;
 import com.youyan.qqmusic.util.DimenUtils;
 import com.youyan.qqmusic.util.StatusBarCompat;
+import com.youyan.qqmusic.widget.MiniBar;
 import com.youyan.qqmusic.widget.TitleBar;
 
 import java.util.ArrayList;
@@ -66,6 +67,8 @@ public class MainFragment extends BaseFragment implements ViewPager.OnPageChange
     protected void initView() {
         initMainTab();
         initViewPager();
+
+        MiniBar mMiniBar = new MiniBar(mRootView.findViewById(R.id.minibar));
     }
 
     private void initViewPager() {
