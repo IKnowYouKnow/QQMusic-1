@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MenuItem">
+        <attr name="menuTitle" format="string" />
+        <attr name="menuType" format="enum">
+            <enum name="none" value="0" />
+            <enum name="hot_point" value="1" />
+            <enum name="on_off" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

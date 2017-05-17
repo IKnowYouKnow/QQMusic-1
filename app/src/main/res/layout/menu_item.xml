@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/menu_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:textColor="@color/text_primary"
+        android:layout_marginLeft="@dimen/margin20"
+        android:textSize="@dimen/font15" />
+
+    <FrameLayout
+        android:layout_width="@dimen/menu_item_right_w"
+        android:layout_height="@dimen/menu_item_right_h"
+        android:layout_gravity="center_vertical">
+
+        <Switch
+            android:id="@+id/item_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/red_point"
+            android:layout_width="@dimen/red_point_size"
+            android:layout_height="@dimen/red_point_size"
+            android:layout_gravity="center"
+            android:background="@drawable/red_point"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</merge>

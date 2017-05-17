@@ -19,4 +19,18 @@
         <item name="android:windowBackground">@drawable/splash</item>
     </style>
 
+    <style name="MenuHeadItem">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="Line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_height</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
 </resources>

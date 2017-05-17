@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.youyan.qqmusic.widget.MenuItem
+        android:id="@+id/item_wifi_only"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        app:menuTitle="@string/conn_wifi_only"
+        app:menuType="on_off"/>
+
+    <com.youyan.qqmusic.widget.MenuItem
+        android:id="@+id/item_timing_close"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        app:menuTitle="@string/close_on_time" />
+
+    <com.youyan.qqmusic.widget.MenuItem
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        app:menuTitle="@string/free_flow_service"
+        app:menuType="hot_point"/>
+
+    <com.youyan.qqmusic.widget.MenuItem
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        app:menuTitle="@string/copy_song_to_phone" />
+
+    <com.youyan.qqmusic.widget.MenuItem
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        app:menuTitle="@string/qplay_and_carmusic" />
+
+    <com.youyan.qqmusic.widget.MenuItem
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        app:menuTitle="@string/clear_space" />
+
+    <com.youyan.qqmusic.widget.MenuItem
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        app:menuTitle="@string/free_wifi" />
+
+    <com.youyan.qqmusic.widget.MenuItem
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        app:menuTitle="@string/help_and_feedback" />
+
+    <com.youyan.qqmusic.widget.MenuItem
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        app:menuTitle="@string/about_qqmusic" />
+
+</LinearLayout>

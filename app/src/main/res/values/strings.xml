@@ -6,4 +6,20 @@
     <string name="search">搜索</string>
     <string name="minibar_default_text">QQ音乐 听我想听的歌</string>
 
+    <string name="upgrade_to_vip">升级为VIP</string>
+    <string name="enjoy_music_right">畅享音乐特权</string>
+    <string name="personal_center">个性化中心</string>
+    <string name="notification_center">消息中心</string>
+
+    <string name="conn_wifi_only">仅Wi-Fi联网</string>
+    <string name="close_on_time">定时关闭</string>
+    <string name="free_flow_service">免流量服务</string>
+    <string name="copy_song_to_phone">传歌到手机</string>
+    <string name="qplay_and_carmusic">QPlay与车载音乐</string>
+    <string name="clear_space">清理占用空间</string>
+    <string name="free_wifi">免费WIFI</string>
+    <string name="help_and_feedback">帮助与反馈</string>
+    <string name="about_qqmusic">关于QQ音乐</string>
+
+
 </resources>
