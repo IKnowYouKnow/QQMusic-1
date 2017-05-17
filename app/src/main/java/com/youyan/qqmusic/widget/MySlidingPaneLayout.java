@@ -34,19 +34,25 @@ public class MySlidingPaneLayout extends SlidingPaneLayout {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 intercept = false;
+                onTouchEvent(ev);
                 break;
             case MotionEvent.ACTION_MOVE:
+                int currentX = (int) ev.getX();
+                int deltaX = currentX - mLastX;
                 if (mConflictViewPager != null) {
-                    int currentX = (int) ev.getX();
-                    int deltaX = currentX - mLastX;
                     if (deltaX > 0 && mConflictViewPager.getCurrentItem() ==  0) {
                         intercept = true;
+                    } else if (isOpen() && Math.abs(deltaX) > 0) {
+                        intercept = true;
+                    } else {
+                        intercept = false;
                     }
                 } else {
                     intercept = false;
                 }
                 break;
             case MotionEvent.ACTION_UP:
+                onTouchEvent(ev);
                 intercept = false;
                 break;
         }
