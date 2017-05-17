@@ -42,7 +42,9 @@ public class MenuFragment extends BaseFragment {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-
+            case R.id.menu_item_myvip:
+                System.out.println("myvip");
+                break;
         }
     }
 }

@@ -34,9 +34,6 @@ public class MySlidingPaneLayout extends SlidingPaneLayout {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 intercept = false;
-                if (isOpen()) {
-                    intercept = true;
-                }
                 break;
             case MotionEvent.ACTION_MOVE:
                 if (mConflictViewPager != null) {

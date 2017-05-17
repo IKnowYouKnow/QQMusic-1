@@ -7,6 +7,7 @@
     <color name="text_primary">#2b2b2b</color>
     <color name="text_second">#929292</color>
 
+    <color name="transparent">#00000000</color>
     <color name="white">#FFFFFF</color>
     <color name="divider">#e5e5e5</color>
     <color name="red_point">#fc4c24</color>

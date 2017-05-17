@@ -3,6 +3,8 @@ package com.youyan.qqmusic.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,7 +22,7 @@ public class MenuItem extends LinearLayout {
     public static final int TYPE_ON_OFF = 2;
 
     private int mMenuType;
-    private Switch mSwitch;
+    private SwitchButton mSwitch;
     private View mRedPoint;
     private TextView mMenuTitle;
 
@@ -37,7 +39,7 @@ public class MenuItem extends LinearLayout {
         setOrientation(HORIZONTAL);
         LayoutInflater.from(context).inflate(R.layout.menu_item, this, true);
 
-        mSwitch = (Switch) findViewById(R.id.item_switch);
+        mSwitch = (SwitchButton) findViewById(R.id.item_switch);
         mRedPoint = findViewById(R.id.red_point);
         mMenuTitle = (TextView) findViewById(R.id.menu_title);
 
@@ -50,14 +52,15 @@ public class MenuItem extends LinearLayout {
     }
 
     private void initMenu(int type, String title) {
+//        mSwitch.setButtonDrawable(R.drawable.switch_btn);
+//        mSwitch.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        mSwitch.setClickable(true);
+
         mMenuTitle.setText(title);
         setMenuType(type);
     }
 
     public void setMenuType(int type) {
-        if (mMenuType == type) {
-            return;
-        }
         mMenuType = type;
         switch (mMenuType) {
             case TYPE_NONE:
@@ -73,6 +76,8 @@ public class MenuItem extends LinearLayout {
                 mRedPoint.setVisibility(GONE);
                 break;
             default:
+                mSwitch.setVisibility(GONE);
+                mRedPoint.setVisibility(GONE);
                 break;
         }
     }
