@@ -3,8 +3,11 @@
     <string name="maintab_mine">我的</string>
     <string name="maintab_music">音乐馆</string>
     <string name="maintab_discover">发现</string>
+    <string name="main_search_hint">搜索音乐、歌词、歌单</string>
     <string name="search">搜索</string>
     <string name="minibar_default_text">QQ音乐 听我想听的歌</string>
+    <string name="settings">设置</string>
+    <string name="close">关闭</string>
 
     <string name="upgrade_to_vip">升级为VIP</string>
     <string name="enjoy_music_right">畅享音乐特权</string>

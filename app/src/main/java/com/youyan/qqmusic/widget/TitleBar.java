@@ -31,6 +31,10 @@ public class TitleBar {
         init();
     }
 
+    public View getView() {
+        return mTitleBar;
+    }
+
     private void init() {
         ButterKnife.bind(this, mTitleBar);
     }

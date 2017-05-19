@@ -5,6 +5,7 @@
 
     <dimen name="line_height">0.2dp</dimen>
     <dimen name="red_point_size">8dp</dimen>
+    <dimen name="red_point_small">6dp</dimen>
 
     <dimen name="guide_skip_btn_h">20dp</dimen>
     <dimen name="guide_skip_btn_w">40dp</dimen>
@@ -18,9 +19,11 @@
     <dimen name="title_btn_size">50dp</dimen>
     <dimen name="main_controlbar_h">50dp</dimen>
 
-    <dimen name="main_searchbar_h">35dp</dimen>
+    <dimen name="main_searchbar_h">38dp</dimen>
     <dimen name="main_searchbtn_size">28dp</dimen>
     <dimen name="slide_parallax_distance">110dp</dimen>
+    <dimen name="voice_search_btn_size">28dp</dimen>
+    <dimen name="back_btn_size">20dp</dimen>
 
     <dimen name="minibar_btn_playlist_size">40dp</dimen>
     <dimen name="minibar_btn_play_size">30dp</dimen>
@@ -31,6 +34,7 @@
     <dimen name="menu_item_right_w">60dp</dimen>
     <dimen name="menu_item_right_h">35dp</dimen>
     <dimen name="menu_item_height">40dp</dimen>
+    <dimen name="menu_feature_icon">25dp</dimen>
 
     <dimen name="margin2">2dp</dimen>
     <dimen name="margin5">5dp</dimen>

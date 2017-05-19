@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height">
+
+    <LinearLayout
+        android:id="@+id/menu_item_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/menu_feature_icon"
+            android:layout_height="@dimen/menu_feature_icon">
+
+            <View
+                android:id="@+id/settings_point"
+                android:layout_width="@dimen/red_point_small"
+                android:layout_height="@dimen/red_point_small"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:background="@drawable/red_point" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/more_feature_setting"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/font14"
+            android:text="@string/settings"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu_item_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/menu_feature_icon"
+            android:layout_height="@dimen/menu_feature_icon"
+            android:src="@drawable/more_feature_logout"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/font14"
+            android:text="@string/close"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
 
-public abstract class BaseFragment extends Fragment implements View.OnClickListener {
+public abstract class BaseFragment extends Fragment implements View.OnClickListener, BaseActivity.OnBackPressedListener {
 
     protected Activity mActivity;
     protected View mRootView;
@@ -21,6 +21,19 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     public void onAttach(Context context) {
         super.onAttach(context);
         mActivity = (Activity) context;
+        BaseActivity baseActivity = mActivity instanceof BaseActivity ? ((BaseActivity) mActivity) : null;
+        if (baseActivity != null) {
+            baseActivity.addOnBackPressedListener(this);
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        BaseActivity baseActivity = mActivity instanceof BaseActivity ? ((BaseActivity) mActivity) : null;
+        if (baseActivity != null) {
+            baseActivity.removeOnBackPressedListener(this);
+        }
     }
 
     @Nullable
@@ -50,5 +63,10 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
+    }
+
+    @Override
+    public boolean onBackPressed() {
+        return false;
     }
 }

@@ -1,42 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/main_searchbar_h"
     android:background="@color/colorPrimary"
-    android:paddingLeft="@dimen/padding5"
-    android:paddingRight="@dimen/padding5"
+    android:orientation="horizontal"
     android:paddingBottom="@dimen/padding5"
-    android:orientation="horizontal">
+    android:gravity="center_vertical" >
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="35dp"
+        android:layout_height="@dimen/back_btn_size"
+        android:layout_marginLeft="@dimen/margin5"
+        android:src="@drawable/back"/>
 
     <FrameLayout
-        android:layout_width="match_parent"
+        android:id="@+id/layout_search_bg"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin5"
+        android:layout_marginRight="@dimen/margin5"
         android:background="@drawable/search_edit_bg">
 
         <LinearLayout
-            android:id="@+id/label_search"
+            android:id="@+id/layout_edit_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="@string/main_search_hint"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/margin10"
+                android:textColorHint="@color/maintab_text_nor"
+                android:textColor="@color/maintab_text_nor"
+                android:textSize="@dimen/font16" />
+
+            <FrameLayout
+                android:layout_width="@dimen/voice_search_btn_size"
+                android:layout_height="@dimen/voice_search_btn_size"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_marginRight="@dimen/margin10">
+
+                <ImageView
+                    android:id="@+id/voice_search_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:src="@drawable/voice_search_button" />
+
+                <ImageView
+                    android:id="@+id/clear_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:src="@drawable/global_clear_text"/>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_label_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <ImageView
                 android:layout_width="@dimen/main_searchbtn_size"
                 android:layout_height="@dimen/main_searchbtn_size"
-                android:src="@drawable/label_search_icon"/>
+                android:src="@drawable/label_search_icon" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/font16"
+                android:text="@string/search"
                 android:textColor="@color/maintab_text_nor"
-                android:text="@string/search"/>
+                android:textSize="@dimen/font16" />
 
         </LinearLayout>
 
     </FrameLayout>
 
+    <TextView
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font16"
+        android:layout_marginRight="@dimen/margin5"
+        android:textColor="@color/maintab_text_sel"
+        android:text="@string/search" />
 
-
-</RelativeLayout>
+</LinearLayout>
