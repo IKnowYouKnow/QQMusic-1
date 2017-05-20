@@ -36,6 +36,8 @@
     <dimen name="menu_item_height">40dp</dimen>
     <dimen name="menu_feature_icon">25dp</dimen>
 
+    <dimen name="music_viewpager_height">150dp</dimen>
+
     <dimen name="margin2">2dp</dimen>
     <dimen name="margin5">5dp</dimen>
     <dimen name="margin10">10dp</dimen>

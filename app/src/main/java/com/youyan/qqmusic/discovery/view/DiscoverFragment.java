@@ -1,4 +1,4 @@
-package com.youyan.qqmusic.main.view.page;
+package com.youyan.qqmusic.discovery.view;
 
 import com.youyan.qqmusic.R;
 import com.youyan.qqmusic.base.LazyFragment;

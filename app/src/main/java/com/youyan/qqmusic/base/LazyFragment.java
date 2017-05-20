@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-public abstract class LazyFragment extends BaseFragment {
+import com.youyan.qqmusic.mvp.presenter.BaseMvpPresenter;
+
+public abstract class LazyFragment<P extends BaseMvpPresenter> extends BaseFragment<P> {
 
     private boolean isViewInit = false;
     private boolean isDataInit = false;

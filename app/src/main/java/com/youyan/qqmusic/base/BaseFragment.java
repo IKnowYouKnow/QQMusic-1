@@ -10,9 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.youyan.qqmusic.music.presenter.MusicPresenter;
+import com.youyan.qqmusic.mvp.presenter.BaseMvpPresenter;
+import com.youyan.qqmusic.mvp.view.MvpFragment;
+
 import butterknife.ButterKnife;
 
-public abstract class BaseFragment extends Fragment implements View.OnClickListener, BaseActivity.OnBackPressedListener {
+public abstract class BaseFragment<P extends BaseMvpPresenter> extends MvpFragment<P>
+        implements View.OnClickListener, BaseActivity.OnBackPressedListener {
 
     protected Activity mActivity;
     protected View mRootView;
