@@ -1,6 +1,7 @@
 package com.youyan.qqmusic.music.view;
 
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 
 import com.youyan.qqmusic.R;
 import com.youyan.qqmusic.base.BasePresenter;
@@ -20,7 +21,16 @@ public class MusicFragment extends LazyFragment<MusicPresenter> {
 
     @Override
     protected void loadData(boolean pullToRefresh) {
+        loadBannerData();
+    }
 
+    private void loadBannerData() {
+        mPresenter.loadBannerData(new BasePresenter.LoadCallback() {
+            @Override
+            public void onResult(String result) {
+                Log.e(null, "onResult: "+result );
+            }
+        });
     }
 
     @Override
