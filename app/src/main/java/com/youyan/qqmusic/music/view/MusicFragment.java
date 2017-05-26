@@ -1,10 +1,8 @@
 package com.youyan.qqmusic.music.view;
 
-import android.support.v4.view.ViewPager;
-import android.util.Log;
+import android.support.v7.widget.RecyclerView;
 
 import com.youyan.qqmusic.R;
-import com.youyan.qqmusic.base.BasePresenter;
 import com.youyan.qqmusic.base.LazyFragment;
 import com.youyan.qqmusic.music.presenter.MusicPresenter;
 
@@ -12,7 +10,7 @@ import butterknife.Bind;
 
 public class MusicFragment extends LazyFragment<MusicPresenter> {
 
-    @Bind(R.id.music_viewpager) ViewPager mViewPager;
+    @Bind(R.id.category_list) RecyclerView mCategoryList;
 
     @Override
     protected int getLayoutRes() {
@@ -25,12 +23,7 @@ public class MusicFragment extends LazyFragment<MusicPresenter> {
     }
 
     private void loadBannerData() {
-        mPresenter.loadBannerData(new BasePresenter.LoadCallback() {
-            @Override
-            public void onResult(String result) {
-                Log.e(null, "onResult: "+result );
-            }
-        });
+
     }
 
     @Override

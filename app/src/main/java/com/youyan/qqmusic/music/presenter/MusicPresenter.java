@@ -18,7 +18,5 @@ public class MusicPresenter extends BasePresenter<MusicFragment, MusicModel> {
         return new MusicModel();
     }
 
-    public void loadBannerData(LoadCallback callback) {
-        mModel.loadBannerData(callback);
-    }
+
 }
